@@ -1,0 +1,301 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+
+  "schedule": ["* 22-23,0-6 * * *", "* * * * 0,6"],
+  "timezone": "Europe/Ljubljana",
+
+  "automerge": false,
+  "prCreation": "not-pending",
+  "semanticCommits": "enabled",
+
+  "packageRules": [
+    {
+      "groupName": ".NET Container Runtimes",
+      "matchPackagePatterns": ["mcr.microsoft.com/dotnet/**"],
+      "matchManagers": ["dockerfile"],
+      "schedule": ["* * * * 0,6"],
+      "labels": ["dependencies/containers"]
+    },
+    {
+      "groupName": ".NET SDK update",
+      "matchUpdateTypes": ["minor","patch"],
+      "matchDatasources": ["dotnet-version"],
+      "labels": ["dependencies/dotnet-sdk"]
+    },
+    {
+      "groupName": ".NET SDK next",
+      "matchUpdateTypes": ["major"],
+      "matchDatasources": ["dotnet-version"],
+      "labels": ["dependencies/dotnet-sdk"],
+      "schedule": ["* * * * 0,6"]
+    },
+    {
+      "groupName": "NuGet: Aspire update",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Aspire.*"],
+      "labels": ["dependencies/nuget"]
+    },
+    {
+      "groupName": "NuGet: Aspire next",
+      "matchUpdateTypes": ["major"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Aspire.*"],
+      "labels": ["dependencies/nuget"],
+      "schedule": ["* * * * 0,6"]
+    },
+    {
+      "groupName": "NuGet: Asp.Versioning update",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Asp.Versioning.*"],
+      "labels": ["dependencies/nuget"]
+    },
+    {
+      "groupName": "NuGet: Asp.Versioning next",
+      "matchUpdateTypes": ["major"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Asp.Versioning.*"],
+      "labels": ["dependencies/nuget"],
+      "schedule": ["* * * * 0,6"]
+    },
+    {
+      "groupName": "NuGet: Escendit update",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Escendit.*"],
+      "labels": ["dependencies/nuget"]
+    },
+    {
+      "groupName": "NuGet: Escendit next",
+      "matchUpdateTypes": ["major"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Escendit.*"],
+      "labels": ["dependencies/nuget"],
+      "schedule": ["* * * * 0,6"]
+    },
+    {
+      "groupName": "NuGet: FluentMigrator update",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["FluentMigrator", "FluentMigrator.*"],
+      "labels": ["dependencies/nuget"]
+    },
+    {
+      "groupName": "NuGet: FluentMigrator next",
+      "matchUpdateTypes": ["major"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["FluentMigrator", "FluentMigrator.*"],
+      "labels": ["dependencies/nuget"],
+      "schedule": ["* * * * 0,6"]
+    },
+    {
+      "groupName": "NuGet: ASP.NET Core update",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Microsoft.AspNetCore.*"],
+      "labels": ["dependencies/nuget"]
+    },
+    {
+      "groupName": "NuGet: ASP.NET Core next",
+      "matchUpdateTypes": ["major"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Microsoft.AspNetCore.*"],
+      "labels": ["dependencies/nuget"],
+      "schedule": ["* * * * 0,6"]
+    },
+    {
+      "groupName": "NuGet: Microsoft.Extensions update",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": [
+        "Microsoft.Extensions.*",
+        "!Microsoft.Extensions.Http.Resilience",
+        "!Microsoft.Extensions.ServiceDiscovery"
+      ],
+      "labels": ["dependencies/nuget"]
+    },
+    {
+      "groupName": "NuGet: Microsoft.Extensions next",
+      "matchUpdateTypes": ["major"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": [
+        "Microsoft.Extensions.*",
+        "!Microsoft.Extensions.Http.Resilience",
+        "!Microsoft.Extensions.ServiceDiscovery"
+      ],
+      "labels": ["dependencies/nuget"],
+      "schedule": ["* * * * 0,6"]
+    },
+    {
+      "groupName": "NuGet: Orleans update",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Microsoft.Orleans.*"],
+      "labels": ["dependencies/nuget"]
+    },
+    {
+      "groupName": "NuGet: Orleans next",
+      "matchUpdateTypes": ["major"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Microsoft.Orleans.*"],
+      "labels": ["dependencies/nuget"],
+      "schedule": ["* * * * 0,6"]
+    },
+    {
+      "groupName": "NuGet: Npgsql update",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Npgsql", "Npgsql.*"],
+      "labels": ["dependencies/nuget"]
+    },
+    {
+      "groupName": "NuGet: Npgsql next",
+      "matchUpdateTypes": ["major"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Npgsql", "Npgsql.*"],
+      "labels": ["dependencies/nuget"],
+      "schedule": ["* * * * 0,6"]
+    },
+    {
+      "groupName": "NuGet: OpenTelemetry update",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["OpenTelemetry", "OpenTelemetry.*"],
+      "labels": ["dependencies/nuget"]
+    },
+    {
+      "groupName": "NuGet: OpenTelemetry next",
+      "matchUpdateTypes": ["major"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["OpenTelemetry", "OpenTelemetry.*"],
+      "labels": ["dependencies/nuget"],
+      "schedule": ["* * * * 0,6"]
+    },
+    {
+      "groupName": "NuGet: Spectre update",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Spectre.Console.*"],
+      "labels": ["dependencies/nuget"]
+    },
+    {
+      "groupName": "NuGet: Spectre next",
+      "matchUpdateTypes": ["major"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Spectre.Console.*"],
+      "labels": ["dependencies/nuget"],
+      "schedule": ["* * * * 0,6"]
+    },
+    {
+      "groupName": "NuGet: System update",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["System.*"],
+      "labels": ["dependencies/nuget"]
+    },
+    {
+      "groupName": "NuGet: System next",
+      "matchUpdateTypes": ["major"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["System.*"],
+      "labels": ["dependencies/nuget"],
+      "schedule": ["* * * * 0,6"]
+    },
+    {
+      "groupName": "NuGet: Temporal.io update",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Temporalio.*"],
+      "labels": ["dependencies/nuget"]
+    },
+    {
+      "groupName": "NuGet: Temporal.io next",
+      "matchUpdateTypes": ["major"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["Temporalio.*"],
+      "labels": ["dependencies/nuget"],
+      "schedule": ["* * * * 0,6"]
+    },
+    {
+      "groupName": "NuGet: xunit update",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["xunit.*"],
+      "labels": ["dependencies/nuget"]
+    },
+    {
+      "groupName": "NuGet: xunit next",
+      "matchUpdateTypes": ["major"],
+      "matchDatasources": ["nuget"],
+      "matchPackageNames": ["xunit.*"],
+      "labels": ["dependencies/nuget"],
+      "schedule": ["* * * * 0,6"]
+    },
+
+    {
+      "matchDatasources": ["crate"],
+      "labels": ["dependencies/rust"]
+    },
+    {
+      "matchDatasources": ["docker"],
+      "labels": ["dependencies/containers"]
+    },
+    {
+      "matchDatasources": ["helm"],
+      "labels": ["dependencies/helm"]
+    },
+    {
+      "matchDatasources": ["maven"],
+      "labels": ["dependencies/java"]
+    },
+    {
+      "matchDatasources": ["rust-version"],
+      "labels": ["dependencies/rust"]
+    },
+    {
+      "matchManagers": ["fleet"],
+      "labels": ["dependencies/fleet"]
+    },
+    {
+      "matchManagers": ["dockerfile"],
+      "labels": ["dependencies/containers"]
+    },
+    {
+      "matchManagers": ["nuget"],
+      "labels": ["dependencies/nuget"]
+    },
+    {
+      "matchManagers": ["maven", "maven-wrapper"],
+      "labels": ["dependencies/java"]
+    },
+    {
+      "matchManagers": ["cargo"],
+      "labels": ["dependencies/rust"]
+    },
+    {
+      "matchManagers": ["bun", "bun-version"],
+      "labels": ["dependencies/npmjs"]
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "labels": ["major"]
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "labels": ["minor"]
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "labels": ["patch"]
+    }
+  ],
+
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "automerge": true,
+    "assignees": [
+      "@snovak7"
+    ]
+  }
+}
