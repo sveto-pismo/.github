@@ -5,7 +5,6 @@ no-changes-template: "- No changes"
 
 prerelease: true
 prerelease-identifier: rc
-include-pre-releases: true
 
 categories:
   - title: "📚 Documentation"
