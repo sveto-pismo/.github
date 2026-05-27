@@ -3,9 +3,6 @@ tag-template: "v$RESOLVED_VERSION"
 change-template: "- $TITLE by @$AUTHOR (#$NUMBER)"
 no-changes-template: "- No changes"
 
-prerelease: true
-prerelease-identifier: rc
-
 categories:
   - title: "📚 Documentation"
     labels:
@@ -52,14 +49,25 @@ template: |
 autolabeler:
   - label: "area/dev-tooling"
     files:
+      # GitHub Actions
       - ".github/**/*"
+
+      # IDE
       - ".editorconfig"
-      - ".gitignore"
       - ".globalconfig"
+
+      # git
+      - ".gitignore"
+
+      # .NET
       - "Directory.Build.props"
       - "Directory.Packages.props"
       - "global.json"
       - "nuget.config"
+
+      # Bun & Node
+      - "package.json"
+      - "bun.lock"
   - label: "area/documentation"
     files:
       - "docs/**/*"
